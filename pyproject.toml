@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kwtrack"
+version = "0.1.0"
+description = "Amazon keyword tracking across markets (Helium10 Cerebro + AdLabs ingestion, SQLite history, Excel reports)."
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.1",
+    "openpyxl>=3.1",
+]
+
+[project.scripts]
+kwtrack = "kwtrack.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["kwtrack*"]
+
+[tool.setuptools.package-data]
+kwtrack = ["schema.sql"]

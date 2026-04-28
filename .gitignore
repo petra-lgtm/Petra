@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# kwtrack data
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+data/
+imports/
+out/
+
+.DS_Store
+.idea/
+.vscode/
