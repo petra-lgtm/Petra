@@ -15,6 +15,32 @@ Say any of: `PTO coverage`, `PTO handoff`, `I'm going on PTO`, `brief my buddy`,
 
 Claude asks who's covering and for the file, then walks the rest.
 
+## Sharing it with your team
+
+The skill has to be installed into a Claude profile before anyone can trigger it by name — a
+copy sitting in this repo won't fire. Two routes:
+
+**Per person (quickest).** Package it and send the `.skill` file to whoever needs it:
+
+```bash
+python3 -m scripts.package_skill skills/pto-coverage ./dist
+```
+
+Run that from the `skill-creator` skill directory, passing the path to this folder. It validates
+first (the `description` has a hard 1024-character limit) and writes `pto-coverage.skill`. When
+that file is shared in a Claude conversation, its file card shows a **Save skill** button —
+clicking it installs the skill into that person's profile. They then say "PTO coverage" and it
+runs. Re-packaging and re-saving replaces the old copy, so updates are just a re-send.
+
+**Whole team (better once it's settled).** Upload the same `.skill` to the org's skill set in
+Claude settings. It then syncs to everyone automatically and nobody has to install anything —
+this is how `eod-summary` and `weekly-client-actions` already reach the team. Needs an admin
+with skill-management rights.
+
+Either way the runner needs **Sophie Hub and Slack connected** in their own Claude account. The
+skill reads whatever stores their connection can see, so each person gets their own brands —
+there's nothing account-specific baked into the skill itself.
+
 ## Your coverage file
 
 One row per brand. Only two columns are required — the brand and who's covering it.
@@ -36,6 +62,8 @@ comparison. Full column list and alias table: [`references/coverage-file.md`](re
 - **It never invents a number.** A metric that didn't come back reads `unavailable`, not `0`.
 - **It doesn't file your Suptask ticket.** More than 4 working days off still needs the "Days
   Off" ticket and 2 weeks' notice to your Squad lead. It reminds you; you file it.
+- **It won't second-guess your split.** There's no cap on how many brands one colleague covers —
+  give someone twelve and it reports all twelve without complaint.
 
 ## Requirements
 

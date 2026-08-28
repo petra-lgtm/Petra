@@ -323,16 +323,6 @@ def parse(path: Path, window_days: int) -> dict:
     for entry in assigned:
         colleagues.setdefault(entry["colleague"], []).append(entry["brand"])
 
-    for name, brands in colleagues.items():
-        if len(brands) > 5:
-            warnings.append({
-                "type": "over_buddy_limit",
-                "detail": (
-                    f"{name} is covering {len(brands)} brands. The PTO policy caps a buddy at "
-                    "5 accounts at a time."
-                ),
-            })
-
     return {
         "source_file": str(path),
         "window_days": window_days,

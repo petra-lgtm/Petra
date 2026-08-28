@@ -3,16 +3,15 @@ name: pto-coverage
 description: >
   PTO coverage handoff for Sophie Society pod leaders. Asks who is covering and for the
   coverage file (which colleague covers which brand, plus each brand's KPIs), then pulls the
-  last 7 days of sales, ad spend, ACOS and TACOS per brand from Sophie Hub, compares every
-  metric to its KPI, reads the live total daily ad budget, and DMs each covering colleague a
-  Slack handoff with only their own brands. Use this skill whenever the user says anything like
-  "PTO coverage", "PTO handoff", "I'm going on PTO", "I'm going on vacation / leave / holiday",
-  "buddy handoff", "brief my buddy", "who's covering my brands", "hand over my accounts",
-  "cover my accounts while I'm away", "send the coverage message", "coverage brief",
-  "OOO handoff", "brief my cover", or any variation implying they are going away and their
-  brands need to be handed to colleagues with current numbers against KPI. Also trigger when
-  the user drops a coverage / handover spreadsheet naming colleagues and brands. Even if the
-  user just says "PTO" or "handoff" in passing — trigger this skill.
+  last 7 days of sales, ad spend, ACOS and TACOS per brand from Sophie Hub, compares each metric
+  to its KPI, reads the live total daily ad budget, and DMs each colleague a Slack handoff with
+  only their own brands. Use whenever the user says anything like "PTO coverage", "PTO handoff",
+  "I'm going on PTO", "going on vacation / leave / holiday", "buddy handoff", "brief my buddy",
+  "who's covering my brands", "hand over my accounts", "cover my accounts while I'm away",
+  "send the coverage message", "coverage brief", "OOO handoff", or any variation implying they
+  are going away and their brands need handing to colleagues with current numbers against KPI.
+  Also trigger when the user drops a coverage or handover spreadsheet naming colleagues and
+  brands. Even if the user just says "PTO" or "handoff" in passing — trigger this skill.
 ---
 
 # PTO Coverage Handoff
@@ -172,9 +171,12 @@ and the daily budget. Then flag anything that needs the runner's attention befor
 metrics off-track against KPI, brands with no KPI in the file, brands with no assigned
 colleague, and any budget or currency gaps.
 
-Close with the two policy reminders that actually bite (see `references/messaging.md`):
-a buddy carries up to 5 accounts at a time, and a PTO of more than 4 working days needs the
-Squad lead told at least 2 weeks ahead with a Suptask "Days Off" ticket filed.
+Close with the one policy reminder that actually bites (see `references/messaging.md`): a PTO of
+more than 4 working days needs the Squad lead told at least 2 weeks ahead, with a Suptask
+"Days Off" ticket filed.
+
+There is **no limit** on how many brands one colleague may cover. Report the split as the
+coverage file states it — never flag a count as too high and never propose redistributing.
 
 ## Rules
 

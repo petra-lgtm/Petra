@@ -358,9 +358,8 @@ def build_summary(coverage: dict, metrics: dict, window: dict) -> str:
             lines.append(f"- [{w['type']}] {w['detail']}")
         lines.append("")
 
-    lines.append("## Policy reminders")
+    lines.append("## Before you go")
     lines.append("")
-    lines.append("- A buddy can support up to 5 accounts at a time.")
     lines.append(
         "- More than 4 working days off: tell your Squad lead at least 2 weeks ahead, introduce "
         "your buddy to the accounts 2 weeks ahead, and file a \"Days Off\" ticket via Suptask in "
