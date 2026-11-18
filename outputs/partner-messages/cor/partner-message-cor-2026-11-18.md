@@ -18,7 +18,7 @@ That tells me shoppers who reach your full-size bars are ready to buy. The 15g b
 
 So my one ask: are you happy for us to move the Silver Soap ad budget off the 15g bar and onto the full-size bars, starting at a modest $10 a day? We'll keep a close eye on it and report back on the first full week of results.
 
-Thanks as always. It's lovely to see how loyal the buyers of your full-size bars are, and I'd like to put more shoppers in front of them.
+Thanks as always. It's lovely to see how well your full-size bars sell once shoppers find them, and I'd like to put more people in front of them.
 
 Best,
 Petra
